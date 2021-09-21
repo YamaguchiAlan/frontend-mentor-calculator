@@ -1,0 +1,414 @@
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+}
+
+.header h4 {
+  font-size: 1rem;
+  margin: 0;
+  line-height: 1;
+}
+
+.header .theme-selector {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  width: 145px;
+}
+
+.header .theme-selector h6 {
+  margin: 0;
+  font-size: 0.38rem;
+}
+
+.switch-toggle .label-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin-bottom: 0.1rem;
+}
+
+.switch-toggle .label-container span {
+  font-size: 0.38rem;
+}
+
+.switch-toggle .input-container {
+  background-color: #232c43;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 75px;
+  height: 25px;
+  border-radius: 20px;
+}
+
+body.theme-2 .switch-toggle .input-container {
+  background-color: #d1cccc;
+}
+
+body.theme-3 .switch-toggle .input-container {
+  background-color: #1d0934;
+}
+
+.switch-toggle .input-container input {
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+.switch-toggle .input-container input + label {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.switch-toggle .input-container input:checked + label:before {
+  background-color: #d03f2f;
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 15px;
+  left: 5px;
+  bottom: 5px;
+  border-radius: 50%;
+}
+
+body.theme-2 .switch-toggle .input-container input:checked + label:before {
+  background-color: #ca5502;
+}
+
+body.theme-3 .switch-toggle .input-container input:checked + label:before {
+  background-color: #00e0d1;
+}
+
+.result-container {
+  background-color: #182034;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 100%;
+  height: 85px;
+  border-radius: 7px;
+  margin: 0.9rem 0 0.7rem 0;
+  overflow: hidden;
+  padding: 0 0.7rem;
+}
+
+body.theme-2 .result-container {
+  background-color: #ededed;
+}
+
+body.theme-3 .result-container {
+  background-color: #1d0934;
+}
+
+.result-container .outer-div {
+  overflow: hidden;
+}
+
+.result-container .outer-div .inner-div {
+  float: right;
+}
+
+@media only screen and (min-width: 375px) {
+  .result-container {
+    height: 100px;
+    font-size: 1.1rem;
+  }
+}
+
+@media only screen and (min-width: 550px) {
+  .result-container {
+    height: 120px;
+    font-size: 1.3rem;
+  }
+}
+
+.body {
+  background-color: #232c43;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  -ms-grid-rows: (1fr)[5];
+      grid-template-rows: repeat(5, 1fr);
+  gap: 0.4rem 0.4rem;
+  padding: 0.7rem;
+  border-radius: 10px;
+}
+
+body.theme-2 .body {
+  background-color: #d1cccc;
+}
+
+body.theme-3 .body {
+  background-color: #1d0934;
+}
+
+.body div {
+  background-color: #eae3dc;
+  -webkit-box-shadow: 0 4px #b4a597;
+          box-shadow: 0 4px #b4a597;
+  color: #444b5a;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.4rem;
+  font-size: 0.9rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+body.theme-2 .body div {
+  background-color: #e5e4e1;
+}
+
+body.theme-3 .body div {
+  background-color: #341c4f;
+}
+
+body.theme-2 .body div {
+  -webkit-box-shadow: 0 4px #a69d91;
+          box-shadow: 0 4px #a69d91;
+}
+
+body.theme-3 .body div {
+  -webkit-box-shadow: 0 4px #871c9c;
+          box-shadow: 0 4px #871c9c;
+}
+
+.body div span {
+  position: relative;
+  top: 3px;
+}
+
+.body #del-button {
+  background-color: #637097;
+  -webkit-box-shadow: 0 4px #404e72;
+          box-shadow: 0 4px #404e72;
+  color: white;
+  font-size: 0.5rem;
+}
+
+body.theme-2 .body #del-button {
+  background-color: #377f86;
+}
+
+body.theme-3 .body #del-button {
+  background-color: #58077d;
+}
+
+body.theme-2 .body #del-button {
+  -webkit-box-shadow: 0 4px #1b5f65;
+          box-shadow: 0 4px #1b5f65;
+}
+
+body.theme-3 .body #del-button {
+  -webkit-box-shadow: 0 4px #bc15f4;
+          box-shadow: 0 4px #bc15f4;
+}
+
+.body #reset-button {
+  background-color: #637097;
+  -webkit-box-shadow: 0 4px #404e72;
+          box-shadow: 0 4px #404e72;
+  color: white;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1 / 3;
+  font-size: 0.5rem;
+}
+
+body.theme-2 .body #reset-button {
+  background-color: #377f86;
+}
+
+body.theme-3 .body #reset-button {
+  background-color: #58077d;
+}
+
+body.theme-2 .body #reset-button {
+  -webkit-box-shadow: 0 4px #1b5f65;
+          box-shadow: 0 4px #1b5f65;
+}
+
+body.theme-3 .body #reset-button {
+  -webkit-box-shadow: 0 4px #bc15f4;
+          box-shadow: 0 4px #bc15f4;
+}
+
+.body #equal-button {
+  background-color: #d03f2f;
+  -webkit-box-shadow: 0 4px #93261a;
+          box-shadow: 0 4px #93261a;
+  color: white;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
+  grid-column: 3 / 5;
+  font-size: 0.5rem;
+}
+
+body.theme-2 .body #equal-button {
+  background-color: #ca5502;
+}
+
+body.theme-3 .body #equal-button {
+  background-color: #00e0d1;
+}
+
+body.theme-2 .body #equal-button {
+  -webkit-box-shadow: 0 4px #893901;
+          box-shadow: 0 4px #893901;
+}
+
+body.theme-3 .body #equal-button {
+  -webkit-box-shadow: 0 4px #6cf9f2;
+          box-shadow: 0 4px #6cf9f2;
+}
+
+body.theme-2 .body div {
+  color: #35352c;
+}
+
+body.theme-2 .body #del-button, body.theme-2 .body #equal-button, body.theme-2 .body #reset-button {
+  color: white;
+}
+
+body.theme-3 .body div {
+  color: #ffe53d;
+}
+
+body.theme-3 .body #equal-button {
+  color: #1b2428;
+}
+
+body.theme-3 .body #del-button, body.theme-3 .body #reset-button {
+  color: white;
+}
+
+@media only screen and (min-width: 430px) {
+  .body {
+    gap: 0.5rem 0.5rem;
+    padding: 0.8rem;
+  }
+  .body div {
+    padding: 0.35rem;
+  }
+}
+
+@media only screen and (min-width: 550px) {
+  .body {
+    gap: 0.7rem 0.7rem;
+    padding: 0.9rem;
+  }
+  .body div {
+    padding: 0.3rem;
+  }
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 32px;
+  font-family: 'Spartan', sans-serif;
+}
+
+body {
+  background-color: #3a4764;
+  color: white;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1rem minmax(255px, 310px) 1rem;
+      grid-template-columns: 1rem minmax(255px, 310px) 1rem;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+      grid-template-areas: ". main .";
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-size: 32px;
+  font-family: 'Spartan', sans-serif;
+}
+
+body.theme-2 {
+  background-color: #e6e6e6;
+  color: #35352c;
+}
+
+body.theme-3 {
+  background-color: #160628;
+  color: #ffe53d;
+}
+
+.container {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: main;
+  margin: 1rem 0;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+@media only screen and (min-width: 375px) {
+  body {
+    -ms-grid-columns: 1rem minmax(310px, 485px) 1rem;
+        grid-template-columns: 1rem minmax(310px, 485px) 1rem;
+  }
+}
+
+@media only screen and (min-width: 550px) {
+  body {
+    -ms-grid-columns: minmax(1rem, 1fr) minmax(310px, 500px) minmax(1rem, 1fr);
+        grid-template-columns: minmax(1rem, 1fr) minmax(310px, 500px) minmax(1rem, 1fr);
+  }
+}
+/*# sourceMappingURL=styles.css.map */

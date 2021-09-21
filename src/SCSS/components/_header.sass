@@ -1,0 +1,64 @@
+@import "../_variables"
+
+.header
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: end
+
+    & h4
+        font-size: 1rem
+        margin: 0
+        line-height: 1
+
+    & .theme-selector
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        align-items: flex-end
+        width: 145px
+
+        & h6
+            margin: 0
+            font-size: 0.38rem
+
+.switch-toggle
+    & .label-container
+        display: flex
+        justify-content: space-evenly
+        margin-bottom: 0.1rem
+
+        & span
+            font-size: 0.38rem
+
+    & .input-container
+        @include get-color(background-color, keypad-background)
+        position: relative
+        display: flex
+        justify-content: space-between
+        align-items: center
+        width: 75px
+        height: 25px
+        border-radius: 20px
+
+        & input
+            position: absolute
+            width: 0
+            height: 0
+            opacity: 0
+
+        & input + label
+            position: relative
+            width: 100%
+            height: 100%
+            cursor: pointer
+
+        & input:checked + label:before
+            @include get-color(background-color, equal-key-background)
+            position: absolute
+            content: ""
+            height: 15px
+            width: 15px
+            left: 5px
+            bottom: 5px
+            border-radius: 50%
