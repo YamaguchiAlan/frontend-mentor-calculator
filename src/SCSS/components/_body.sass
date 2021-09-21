@@ -1,0 +1,80 @@
+@import "../_variables"
+
+.body
+    @include get-color(background-color, keypad-background)
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    grid-template-rows: repeat(5, 1fr)
+    gap: 0.4rem 0.4rem
+    padding: 0.7rem
+    border-radius: 10px
+
+.body
+    & div
+        @include get-color(background-color, key-background)
+        @include get-box-shadow(key-shadow)
+        color: map-deep-get($colors, theme-1, text-secondary)
+        display: flex
+        justify-content: center
+        align-items: center
+        padding: 0.4rem
+        font-size: 0.9rem
+        border-radius: 5px
+        cursor: pointer
+
+        & span
+            position: relative
+            top: 3px
+
+    & #del-button
+        @include get-color(background-color, key-background-secondary)
+        @include get-box-shadow(key-shadow-secondary)
+        color: map-deep-get($colors, theme-1, text-primary)
+        font-size: 0.5rem
+
+    & #reset-button
+        @include get-color(background-color, key-background-secondary)
+        @include get-box-shadow(key-shadow-secondary)
+        color: map-deep-get($colors, theme-1, text-primary)
+        grid-column: 1 / 3
+        font-size: 0.5rem
+
+    & #equal-button
+        @include get-color(background-color, equal-key-background)
+        @include get-box-shadow(equal-key-shadow)
+        color: map-deep-get($colors, theme-1, text-primary)
+        grid-column: 3 / 5
+        font-size: 0.5rem
+
+body.theme-2 .body
+    & div
+        color: map-deep-get($colors, theme-2, text-primary)
+
+    & #del-button, #equal-button, #reset-button
+        color: map-deep-get($colors, theme-2, text-secondary)
+
+body.theme-3 .body
+    & div
+        color: map-deep-get($colors, theme-3, text-primary)
+
+    & #equal-button
+        color: map-deep-get($colors, theme-3, text-secondary)
+
+    & #del-button, #reset-button
+        color: map-deep-get($colors, theme-1, text-primary)
+
+@media only screen and (min-width: 430px)
+    .body
+        gap: 0.5rem 0.5rem
+        padding: 0.8rem
+
+        & div
+            padding: 0.35rem
+
+@media only screen and (min-width: 550px)
+    .body
+        gap: 0.7rem 0.7rem
+        padding: 0.9rem
+
+        & div
+            padding: 0.3rem

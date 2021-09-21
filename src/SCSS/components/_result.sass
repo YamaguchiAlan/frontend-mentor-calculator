@@ -1,0 +1,29 @@
+@import "../_variables"
+
+.result-container
+    @include get-color(background-color, screen-background)
+    display: flex
+    align-items: center
+    justify-content: flex-end
+    width: 100%
+    height: 85px
+    border-radius: 7px
+    margin: 0.9rem 0 0.7rem 0
+    overflow: hidden
+    padding: 0 0.7rem
+
+    & .outer-div
+        overflow: hidden
+
+        & .inner-div
+            float: right
+
+@media only screen and (min-width: 375px)
+    .result-container
+        height: 100px
+        font-size: 1.1rem
+
+@media only screen and (min-width: 550px)
+    .result-container
+        height: 120px
+        font-size: 1.3rem

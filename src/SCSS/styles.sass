@@ -1,0 +1,46 @@
+@import "./_variables"
+
+@import "./components/_header"
+@import "./components/_result"
+@import "./components/_body"
+
+*
+    box-sizing: border-box
+
+html
+    font-size: 32px
+    font-family: 'Spartan', sans-serif
+
+body
+    background-color: map-deep-get($colors, theme-1, main-background)
+    color: map-deep-get($colors, theme-1, text-primary)
+    display: grid
+    grid-template-columns: 1rem minmax(255px, 310px) 1rem
+    grid-template-rows: auto
+    grid-template-areas: ". main ."
+    height: 100vh
+    margin: 0
+    padding: 0
+    font-size: 32px
+    font-family: 'Spartan', sans-serif
+
+body.theme-2
+    background-color: #e6e6e6
+    color: #35352c
+
+body.theme-3
+    background-color: #160628
+    color: #ffe53d
+
+.container
+    grid-area: main
+    margin: 1rem 0
+    align-self: center
+
+@media only screen and (min-width: 375px)
+    body
+        grid-template-columns: 1rem minmax(310px, 485px) 1rem
+
+@media only screen and (min-width: 550px)
+    body
+        grid-template-columns: minmax(1rem, 1fr) minmax(310px, 500px) minmax(1rem, 1fr)
